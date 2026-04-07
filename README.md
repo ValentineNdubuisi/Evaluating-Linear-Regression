@@ -40,4 +40,37 @@ Before we proceed, we need to:
 
 #### 3.Data Visualization
 Histogram Of House Prices: We use the histogram of the house prices to look at the price distribution. It shows that house prices are highly positively skewed: a major bulk of properties are in the price range of 1M, while only a handful of high-value homes caused this skew.
-Scatter Plot, House Size Verses Price: The scatter plot arepresents the house size vs. price in colours according to location. it indicates the relationship between house size and price, with each dot color-coded according to the location it came from. Generally, it would seem that larger homes are more expensive, with the exception of the highest priced being urban homes.
+
+Scatter Plot of House Size Verses Price: The scatter plot arepresents the house size vs. price in colours according to location. it indicates the relationship between house size and price, with each dot color-coded according to the location it came from. Generally, it would seem that larger homes are more expensive, with the exception of the highest priced being urban homes.
+
+Boxplot for house prices across various locations: To understand geographical price variation better, the boxplot showes that urban, having the highest median price and variability, contrasts sharply with rural, which actually has a lower value with more stable pricing.
+
+A correlation heatmap of the numerical figures: There was a correlation heatmap for identifying important relationships among the features. The results exhibited a strong positive correlation between house prices and square footage, with an inverse correlation to crime rate and distance to town.
+
+#### 3. Implementation of Linear Regression
+* A. Implementation of Scikit-learn
+Scikit-learn has smart and straightforward features for performing linear regression by the LinearRegression() function, which deals with feature scaling and takes Ordinary Least Squares (OLS) with the use of the models for minimizing the error between the predicted and actual values of the data. The use of the model happens when training data is used to train the model and when the house prices are predicted using the test dataset. The performances of the models are assessed through the Mean Squared Error (MSE) and R² score for determining accuracy.
+
+* Scikit-Learn Result
+This section gives the results of Scikit-learn implementation with some interpretation. The evaluation is based on MSE, R² score, and some statistical insights.
+
+Here are some outputs from the Scikit-learn model:
+
+a.Intercept: -272,428.05
+
+b.MSE: 34,697,783,374.37
+
+c.R² Score: 0.869
+
+This R² score is high (86.9%) and represents a good fit for the model; however, it indicates a higher MSE implying that degree predictions will be off to some extent. Feature effect:
+
+a.Square_Feet (298.36) and Bedrooms (33,498.65) have positive effects on prices, while,
+
+b.Age (-1,058.85), Distance to City Center (-4,241.97), and Crime Rate (-2,267.64) have negative effects on prices.
+
+c.Major contributors are Location (269,205.89) and Building Type (95,076.34).
+
+Scikit-learn is efficient in prediction but does not include any indicators of statistical significance.
+
+#### B. Implementation of Statsmodels
+Statsmodels is the best model for providing a precise statistical summary in linear regression. It's different from Scikit-learn, and this will add the constant term manually to hold the intercept. Since the implementation relies on a method of Ordinary Least Squares (OLS), it also displays additional metrics like p-values, confidence levels, and a statistical significance test against each feature.
