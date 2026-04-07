@@ -16,7 +16,7 @@ This project utilizes a synthetic data constructed to act as an analogy to real-
 * Categorial Features: a. Location (urban, suburban, and rural) b. Building type (apartment, townhouse, and detached)
 * Target Variable: a. Price of the house (dependent variable) Various preprocessing methods were therefore applied to the dataset to verify its adequacy for regression modelling. First, missing values in the dataset were checked and imputation techniques were applied wherever appropriate. Next, categorical variables were changed into numerical format using one-hot encoding, which enabled an efficient model interpretation of categorical data. Furthermore, all numerical variables were subjected to different feature scaling methods to standardize their ranges in order to boost the performance of the model. Finally, the dataset was then split into 80% (training data) and 20% (testing data) so that a well-rounded evaluation of the model on unseen data would be possible.
 
-  1.Data Creation
+#### 1.Data Creation
 As said in the description, this data creation process uses Python libraries (NumPy and pandas) to generate a synthetic dataset that simulates the characteristics of a realistic housing market for machine learning analysis.
 
 Firstly, numerical features representing house attributes—such as square footage, number of bedrooms, house age, distance from the city center, and local crime rate—are generated using random sampling within specified realistic ranges. For instance, house sizes are uniformly distributed between 800 and 5,000 square feet, while crime rates vary from 0 to 50 incidents per 1,000 residents.
