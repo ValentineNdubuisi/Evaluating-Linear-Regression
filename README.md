@@ -28,3 +28,16 @@ The target variable, house price, is then computed as a function of these numeri
 Finally, the generated data for all features and the computed prices are consolidated into a pandas DataFrame, producing a tabular dataset suitable for subsequent statistical analysis and machine learning model development.
 
 This synthetic data generation approach enables controlled experimentation and modeling when access to real housing data is limited or when testing methodologies under varied hypothetical scenarios.
+
+#### 2.Exploratory Data Analysis (EDA) and Data Preprocessing¶
+Exploratory Data Analysis (EDA) is the mathematical way of analyzing, investigating, and summarizing the main characteristics of the synthentic dataset created. It often involves a combination of statistical methods and data visualization techniques to provide insights into the structure, distribution, and relationships within the data before applying formal modeling or hypothesis testing. EDA helps detect patterns, anomalies, and missing values, enabling practitioners to refine data quality and select appropriate analytical methods.
+
+Before we proceed, we need to:
+✅ Load the dataset
+✅ Explore the data with summary statistics
+✅ Visualize relationships between features and price
+✅ Data Preparation: Handle categorical variables (convert them into a numerical format)
+
+#### 3.Data Visualization
+Histogram Of House Prices: We use the histogram of the house prices to look at the price distribution. It shows that house prices are highly positively skewed: a major bulk of properties are in the price range of 1M, while only a handful of high-value homes caused this skew.
+Scatter Plot, House Size Verses Price: The scatter plot arepresents the house size vs. price in colours according to location. it indicates the relationship between house size and price, with each dot color-coded according to the location it came from. Generally, it would seem that larger homes are more expensive, with the exception of the highest priced being urban homes.
